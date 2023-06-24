@@ -14,3 +14,18 @@ Then, it'll ask whether to init a new Repository or to clone a new remote one.
 Lastly, it'll ask about keeping or not the old commit information (dates, emails and names).
 
 After that, it'll commit everything and leave the new Repository ready for a push.
+
+### Commit information
+Each commit's information is saved to a `commit.txt` file inside the individual commit folder. Inside this text file, each row represents the following:
+
+| Row | Description    |
+|-----|:--------------:|
+| 1st | committer_date |
+| 2nd | committer_name |
+| 3rd | committer_mail |
+| 4th | author_date    |
+| 5th | author_name    |
+| 6th | author_mail    |
+| ... | commit_message |
+
+You can freely tamper with them, but remember to keep them compatible with Git, as the script won't try to correct them and will just assume they to be correct.
